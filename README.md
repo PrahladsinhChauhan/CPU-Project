@@ -1,5 +1,5 @@
 # CPU-Project
-This CPU was made for University Project
+This CPU was made for University Project on traditional Logisim.
 It draws inspiration from “Computer System Architecture” by M. Morris Mano and Intel 8085 which were part of curriculum. However, certain features were removed and some were added from my side.
 
 Some notable features of this microprocessor are as follows:
