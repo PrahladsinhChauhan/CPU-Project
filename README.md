@@ -5,7 +5,7 @@ It draws inspiration from Intel 8085 which was part of curriculum. However, cert
 Below is the Planned Instruction set for this microprocessor
 
 |UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description||UpperHex|LowerHex|Mnemonics|
-|---|---|-------------|---|---|---|-------|---|---|---|------------|---|---|---|------------|---|---|---|------------|---|---|---|------------|---|---|---|----------|---|---|---|-------|
+|:---:|:---:|:-------------:|---|:---:|:---:|:-------:|---|:---:|:---:|:------------:|---|:---:|:---:|:------------:|---|:---:|:---:|:------------:|---|:---:|:---:|:------------:|---|:---:|:---:|:----------:|---|:---:|:---:|:-------:|
 | 0 | 0 | NOP         |   | 0 | 8 |       |   | 1 | 0 |            |   | 1 | 8 |            |   | 2 | 0 |            |   | 2 | 8 |            |   | 3 | 0 |          |   | 3 | 8 |       |
 | 0 | 1 | JMP         |   | 0 | 9 |       |   | 1 | 1 |            |   | 1 | 9 |            |   | 2 | 1 |            |   | 2 | 9 |            |   | 3 | 1 |          |   | 3 | 9 |       |
 | 0 | 2 | CALL        |   | 0 | A |       |   | 1 | 2 |            |   | 1 | A |            |   | 2 | 2 |            |   | 2 | A |            |   | 3 | 2 |          |   | 3 | A |       |
