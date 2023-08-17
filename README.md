@@ -14,8 +14,9 @@ The ALU of this microprocessor has seperate blocks for Addition, Addition with C
 This microcontroller uses an array of sixteen 12bit address 1Byte data memory modules and a single 16bit address 1bit data memory module. The array is arranged in order to utilize the 16bit Address Bus of microcontroller and it stores instruction as well as data for a program. The 1bit data of single memory module is used as flag for 8bit data from array. The isINSTRUCTION flag is used to distinguish between instruction and data for each byte stored in the array.
 
 <h2>Control Unit</h2>
-The Control Unit follows the basic Fetch and Decode method to get instruction (and data) from memory and execute them. However, due to different control signal requirement and different data storing technique leading to varying instruction length. The Control Unit required an indigenous approach for Fetch and Decode. 
+The Control Unit follows the basic Fetch and Decode method to get instruction (and data) from memory and execute them. However, due to different control signal requirement and different data storing technique leading to varying instruction length. The Control Unit required an indigenous approach for Fetch and Decode. I implemented a 3-stage shift register to aggregate next3bytes from memory and pass them to Control Unit, depending on the OPCODE and isINSTRUCTION flag, Control Unit can execute 8bit(OPCODE) instruction, 16bit(OPCODE + 8bit data) instruction, or 24bit(OPCODE + 16bit data) instruction.
 
+<h2>Operands</h2>
 Operands used in microprocessor are
 |8bit Operands|16bit Operands|
 |:----------:|:-----------:|
@@ -28,7 +29,7 @@ Operands used in microprocessor are
 |Memory        |                |
 
 
-
+<h2>Instruction Set</h2>
 Below is the Planned Instruction set for this microprocessor
 
 |UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|
