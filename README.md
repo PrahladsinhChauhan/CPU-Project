@@ -1,12 +1,26 @@
 # CPU-Project
 This CPU was made for University Project
-It draws inspiration from Intel 8085 which was part of curriculum. However, certain features were removed and some were added from my side.
+It draws inspiration from “Computer System Architecture” by M. Morris Mano and Intel 8085 which were part of curriculum. However, certain features were removed and some were added from my side.
+
+Some notable features of this microprocessor are as follows:
+## LIDS
+LIDS stand for Load, Increment, Decrement, Show
+I came up with this system when facing the problem of managing inputs and outputs of each register on Common Data Bus. As all 8bit registers also contribute to 16bit register pair, this problem grew larger. For two register, 3 seperate load controls existed, same amount of increment and decrement controls. To prevent messy wirings all around, I designed this 4bit control signal for each register, be it 8bit or 16bit. In Control Unit of microprocessor, a seperate module is dedicated to combine all register control signals into individual 4bit LIDS control signal.
+
+##ALU
+The ALU of this microprocessor has seperate blocks for Addition, Addition with Carry, Subtraction, Subtraction with Borrow, AND operation, XOR operation, and OR operation. These operations can be performed on any 8bit operand supported by microprocessor. The ALU also has a wide range of Status Flags, viz. CarryOUT, Zero, isFF, A Greater, A Equal, A Smaller, isODD, and isNEGATIVE.
+
+##Memory
+This microcontroller uses an array of sixteen 12bit address 1Byte data memory modules and a single 16bit address 1bit data memory module. The array is arranged in order to utilize the 16bit Address Bus of microcontroller and it stores instruction as well as data for a program. The 1bit data of single memory module is used as flag for 8bit data from array. The isINSTRUCTION flag is used to distinguish between instruction and data for each byte stored in the array.
+
+##Control Unit
+The Control Unit follows the basic Fetch and Decode method to get instruction (and data) from memory and execute them. However, due to different control signal requirement and different data storing technique leading to varying instruction length. The Control Unit required an indigenous approach for Fetch and Decode. 
 
 Operands used in microprocessor are
 |8bit Operands|16bit Operands|
 |:----------:|:-----------:|
 |8bit Immediate|16bit Immediate|
-|Register A    |PSW (Program Status Word) {Reg Pair A and Status Flag from ALU}|
+|Register A    |PSW (Program Status Word) {Reg Pair A and Flags from ALU}|
 |Register B    |Register Pair BC|
 |Register C    |Register Pair DE|
 |Register D    |SP (Stack Pointer)|
