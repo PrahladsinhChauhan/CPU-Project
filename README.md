@@ -3,7 +3,7 @@ This CPU was made for University Project
 It draws inspiration from Intel 8085 which was part of curriculum. However, certain features were removed and some were added from my side.
 
 Operands used in microprocessor are
-|8bit Operand|16bit Operand|
+|8bit Operands|16bit Operands|
 |:----------:|:-----------:|
 |8bit Immediate|16bit Immediate|
 |Register A    |PSW (Program Status Word) {Reg Pair A and Status Flag from ALU}|
