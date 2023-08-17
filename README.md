@@ -3,17 +3,17 @@ This CPU was made for University Project
 It draws inspiration from “Computer System Architecture” by M. Morris Mano and Intel 8085 which were part of curriculum. However, certain features were removed and some were added from my side.
 
 Some notable features of this microprocessor are as follows:
-## LIDS
+<h2>LIDS</h2>
 LIDS stand for Load, Increment, Decrement, Show
 I came up with this system when facing the problem of managing inputs and outputs of each register on Common Data Bus. As all 8bit registers also contribute to 16bit register pair, this problem grew larger. For two register, 3 seperate load controls existed, same amount of increment and decrement controls. To prevent messy wirings all around, I designed this 4bit control signal for each register, be it 8bit or 16bit. In Control Unit of microprocessor, a seperate module is dedicated to combine all register control signals into individual 4bit LIDS control signal.
 
-##ALU
+<h2>ALU</h2>
 The ALU of this microprocessor has seperate blocks for Addition, Addition with Carry, Subtraction, Subtraction with Borrow, AND operation, XOR operation, and OR operation. These operations can be performed on any 8bit operand supported by microprocessor. The ALU also has a wide range of Status Flags, viz. CarryOUT, Zero, isFF, A Greater, A Equal, A Smaller, isODD, and isNEGATIVE.
 
-##Memory
+<h2>Memory</h2>
 This microcontroller uses an array of sixteen 12bit address 1Byte data memory modules and a single 16bit address 1bit data memory module. The array is arranged in order to utilize the 16bit Address Bus of microcontroller and it stores instruction as well as data for a program. The 1bit data of single memory module is used as flag for 8bit data from array. The isINSTRUCTION flag is used to distinguish between instruction and data for each byte stored in the array.
 
-##Control Unit
+<h2>Control Unit</h2>
 The Control Unit follows the basic Fetch and Decode method to get instruction (and data) from memory and execute them. However, due to different control signal requirement and different data storing technique leading to varying instruction length. The Control Unit required an indigenous approach for Fetch and Decode. 
 
 Operands used in microprocessor are
