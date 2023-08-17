@@ -2,6 +2,19 @@
 This CPU was made for University Project
 It draws inspiration from Intel 8085 which was part of curriculum. However, certain features were removed and some were added from my side.
 
+Operands used in microprocessor are
+|8bit Operand|16bit Operand|
+|:----------:|:-----------:|
+|8bit Immediate|16bit Immediate|
+|Register A    |PSW (Program Status Word) {Reg Pair A and Status Flag from ALU}|
+|Register B    |Register Pair BC|
+|Register C    |Register Pair DE|
+|Register D    |SP (Stack Pointer)|
+|Register E    |PC (Program Counter)|
+|Memory        |                |
+
+
+
 Below is the Planned Instruction set for this microprocessor
 
 |UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|Description|UpperHex|LowerHex|Mnemonics|
